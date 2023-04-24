@@ -1,6 +1,8 @@
 .numList {
-    padding: 10px;
+    height: 100vh;
     width: 60%;
+    padding: 10px;
+    margin: 0;
     display: flex;
     flex-flow: column;
     background-color: aqua;

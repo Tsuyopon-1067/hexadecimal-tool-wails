@@ -2,5 +2,6 @@
     display: flex;
     margin: 0;
     width: 100vw;
-    background-color: white;
+    height: 100vh;
+    background-color: #fff88fff;
 }
