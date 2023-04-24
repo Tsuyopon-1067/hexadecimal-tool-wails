@@ -1,7 +1,8 @@
 .numButtonList {
-    height: 100vh;
+    height: calc(100vh-20px);
     width: 40%;
     display: flex;
     flex-flow: column;
-    margin: 0;
+    justify-content: space-evenly;
+    margin: 10px;
 }
