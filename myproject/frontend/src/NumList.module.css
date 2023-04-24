@@ -1,5 +1,5 @@
 .numList {
-    height: 100vh;
+    height: calc(100vh-20px);
     width: 60%;
     padding: 10px;
     margin: 0;
