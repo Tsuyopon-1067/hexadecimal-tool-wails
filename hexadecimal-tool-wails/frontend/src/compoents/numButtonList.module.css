@@ -1,0 +1,4 @@
+.btnList {
+    display: flex;
+    flex-flow: column;
+}

@@ -1,0 +1,15 @@
+.numButton {
+    margin: 4px;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 3px 4px 3px 0px rgba(0, 0, 0, 0.3);
+    background-color: #04cbb0;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.numButton:hover {
+    background-color: #03aa93;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
