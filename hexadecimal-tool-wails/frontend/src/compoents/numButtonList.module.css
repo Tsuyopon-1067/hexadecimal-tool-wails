@@ -1,4 +1,18 @@
 .btnList {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+}
+
+.left {
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
+    display: flex;
+    flex-flow: column;
+}
+
+.right {
+    grid-row: 1 / 1;
+    grid-column: 2 / 3;
     display: flex;
     flex-flow: column;
 }
