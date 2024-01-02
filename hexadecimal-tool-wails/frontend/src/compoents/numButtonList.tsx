@@ -10,10 +10,10 @@ function NumButtonList({ onClick }: props) {
     const listLeft = [];
     const listRight = [];
     for (let i = 0; i < 10; i++) {
-        listLeft.push(<NumButton key={i} number={i} onClick={onClick} />);
+        listLeft.push(<NumButton number={i} onClick={onClick} />);
     }
     for (let i = 10; i < 16; i++) {
-        listRight.push(<NumButton key={i} number={i} onClick={onClick} />);
+        listRight.push(<NumButton number={i} onClick={onClick} />);
     }
     return (
         <div className={styles.btnList}>

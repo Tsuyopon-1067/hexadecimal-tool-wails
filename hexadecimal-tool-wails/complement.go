@@ -52,5 +52,6 @@ func (c *Complement) GetValueData() ValueData {
 	cHex, cDec, cBin := stack.ToHexDecBinComplementString()
 	normal := HexDecBin{hex, dec, bin}
 	complement := HexDecBin{cHex, cDec, cBin}
-	return ValueData{normal, complement}
+	fmt.Println(ValueData{normal, complement})
+	return ValueData{value: normal, complementValue: complement}
 }
