@@ -1,0 +1,36 @@
+.tableDiv {
+    width: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table thead {
+    background-color: #04cbb0;
+    color: white;
+}
+
+.title {
+    padding: 6pt 3pt 1pt 3pt;
+    text-align: center;
+    font-size: 16pt;
+}
+
+.subTitleType {
+    padding: 1pt 3pt 3pt 3pt;
+    border-bottom: 1pt solid #e0e0e0;
+    text-align: center;
+    font-size: 10pt;
+    width: 96pt;
+}
+
+.subTitleResult {
+    padding: 1pt 3pt 3pt 3pt;
+    border-bottom: 1pt solid #e0e0e0;
+    text-align: center;
+    font-size: 10pt;
+    width: auto;
+}
