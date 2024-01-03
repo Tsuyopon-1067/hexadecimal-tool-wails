@@ -11,8 +11,8 @@ function NumberDisplayListLine({
 }: NumberDisplayListLineProps) {
     return (
         <tr>
-            <td className={styles.td}>{description}</td>
-            <td className={styles.td}>{value}</td>
+            <td className={styles.tdLeft}>{description}</td>
+            <td className={styles.tdRight}>{value}</td>
         </tr>
     );
 }

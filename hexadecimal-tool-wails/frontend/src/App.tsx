@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ButtonList from "./compoents/buttonList";
 import NumberDisplayList from "./compoents/numberDisplayList";
+import ValueDescribe from "./compoents/valueDescribe";
 import styles from "./App.module.css";
-import { Push, GetValueData, Delete, Pop } from "../wailsjs/go/main/Complement";
+import {
+    Push,
+    GetValueData,
+    Delete,
+    Pop,
+    GetDescribeData,
+} from "../wailsjs/go/main/Complement";
 import { main } from "../wailsjs/go/models";
 import { defaultValueData } from "./types";
 
 function App() {
     const [values, setValues] = useState<main.ValueData>();
+    const [describeData, setDescribeData] = useState<main.DescribeData[]>();
 
     const numberButtonClick = (key: number) => {
         Push(key).then(renewValues);
@@ -19,13 +27,18 @@ function App() {
         Pop().then(renewValues);
     };
     const renewValues = () => {
-        GetValueData().then(updateValues);
+        GetValueData().then(setValues);
+        GetDescribeData().then(setDescribeData);
     };
-    const updateValues = (result: main.ValueData) => setValues(result);
+    useEffect(() => {
+        renewValues();
+    }, []);
 
     return (
         <div className={styles.mainDiv}>
             <div className={styles.display}>
+                <ValueDescribe data={describeData} />
+                <div className={styles.space} />
                 <NumberDisplayList
                     title="数値"
                     data={values?.Value || defaultValueData.Value}

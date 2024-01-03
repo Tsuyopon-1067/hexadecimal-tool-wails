@@ -1,6 +1,15 @@
-.td {
-    padding: 12px 24px;
+.tdLeft {
+    padding: 4pt 4pt;
     border-bottom: 1pt solid #e0e0e0;
     font-size: 12pt;
     text-align: center;
+    width: 144pt;
+}
+
+.tdRight {
+    padding: 4pt 4pt;
+    border-bottom: 1pt solid #e0e0e0;
+    font-size: 12pt;
+    text-align: center;
+    width: auto;
 }
