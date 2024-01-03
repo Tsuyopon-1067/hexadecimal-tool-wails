@@ -1,6 +1,4 @@
 import { useState } from "react";
-import logo from "./assets/images/logo-universal.png";
-import "./App.css";
 import ButtonList from "./compoents/buttonList";
 import NumberDisplayList from "./compoents/numberDisplayList";
 import styles from "./App.module.css";
@@ -32,6 +30,7 @@ function App() {
                     title="数値"
                     data={values?.Value || defaultValueData.Value}
                 />
+                <div className={styles.space} />
                 <NumberDisplayList
                     title="補数"
                     data={values?.ComplementValue || defaultValueData.Value}
