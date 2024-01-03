@@ -4,6 +4,8 @@ import {main} from '../models';
 
 export function Delete():Promise<void>;
 
+export function GetDescribeData():Promise<Array<main.DescribeData>>;
+
 export function GetValueData():Promise<main.ValueData>;
 
 export function Pop():Promise<void>;

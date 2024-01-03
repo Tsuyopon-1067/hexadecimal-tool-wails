@@ -2,11 +2,17 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"strconv"
 )
 
 type ComplementStack struct {
 	stack Stack
+}
+
+type DescribeData struct {
+	Title string `json:"Title"`
+	Value string `json:"Value"`
 }
 
 type ComplementStackI interface {
@@ -123,4 +129,40 @@ func getHexDecBinString(value uint64, hexDigit int, binDigit int) (string, strin
 	hexStringLen := len(hexString)
 	binStringLen := len(binString)
 	return hexString[hexStringLen-hexDigit:], decString, binString[binStringLen-binDigit:]
+}
+
+func (s *ComplementStack) ToDescribeData() []DescribeData {
+	var res []DescribeData
+	res = append(res, DescribeData{Title: "桁数（2進数）", Value: strconv.Itoa(s.Size()*4)})
+	res = append(res, DescribeData{Title: "桁数（16進数）", Value: strconv.Itoa(s.Size())})
+	res = append(res, DescribeData{Title: "範囲（符号あり）", Value: s.getSignedRange()})
+	res = append(res, DescribeData{Title: "範囲（符号なし）", Value: s.getUnsignedRange()})
+	return res
+}
+
+
+func (s *ComplementStack) getUnsignedRange() string {
+	if s.Size() == 0 {
+		return ""
+	}
+
+	max := uint64(1)
+	if s.Size() == 16 {
+		max = math.MaxUint64
+	} else {
+		max  = uint64(1) << (4*s.Size())
+		max -= 1
+	}
+	return "0~" + strconv.FormatUint(max, 10)
+}
+
+func (s *ComplementStack) getSignedRange() string {
+	if s.Size() == 0 {
+		return ""
+	}
+
+	shift := 4*(s.Size()-1) + 3
+	min := int64(-1) << shift
+	max := -(min+1)
+	return strconv.FormatInt(min, 10) + "~" + strconv.FormatInt(max, 10)
 }

@@ -1,5 +1,19 @@
 export namespace main {
 	
+	export class DescribeData {
+	    Title: string;
+	    Value: string;
+	
+	    static createFrom(source: any = {}) {
+	        return new DescribeData(source);
+	    }
+	
+	    constructor(source: any = {}) {
+	        if ('string' === typeof source) source = JSON.parse(source);
+	        this.Title = source["Title"];
+	        this.Value = source["Value"];
+	    }
+	}
 	export class HexDecBin {
 	    Hex: string;
 	    Dec: string;

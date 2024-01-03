@@ -62,3 +62,7 @@ func (c *Complement) GetValueData() ValueData {
 func (c *Complement) Delete() {
 	stack.Delete()
 }
+
+func (c *Complement) GetDescribeData() []DescribeData {
+	return stack.ToDescribeData()
+}

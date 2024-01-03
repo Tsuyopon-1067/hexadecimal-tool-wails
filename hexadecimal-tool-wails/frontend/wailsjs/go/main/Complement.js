@@ -6,6 +6,10 @@ export function Delete() {
   return window['go']['main']['Complement']['Delete']();
 }
 
+export function GetDescribeData() {
+  return window['go']['main']['Complement']['GetDescribeData']();
+}
+
 export function GetValueData() {
   return window['go']['main']['Complement']['GetValueData']();
 }
