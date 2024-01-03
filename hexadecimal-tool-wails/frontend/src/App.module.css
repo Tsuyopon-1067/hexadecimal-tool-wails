@@ -4,6 +4,7 @@
     grid-template-columns: 1fr 220pt;
     grid-template-rows: 0.5cm 1fr 0.5cm;
     display: grid;
+    font-family: "PlemolJP";
 }
 
 .display {
