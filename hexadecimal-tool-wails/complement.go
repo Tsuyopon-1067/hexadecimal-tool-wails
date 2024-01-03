@@ -48,11 +48,14 @@ func (c *Complement) Pop() {
 }
 
 func (c *Complement) GetValueData() ValueData {
+	if (stack.IsEmpty()) {
+		return ValueData{Value: HexDecBin{"", "", ""}, ComplementValue: HexDecBin{"", "", ""}}
+	}
+
 	hex, dec, bin := stack.ToHexDecBinString()
 	cHex, cDec, cBin := stack.ToHexDecBinComplementString()
 	normal := HexDecBin{hex, dec, bin}
 	complement := HexDecBin{cHex, cDec, cBin}
-	fmt.Println(ValueData{normal, complement})
 	return ValueData{Value: normal, ComplementValue: complement}
 }
 
