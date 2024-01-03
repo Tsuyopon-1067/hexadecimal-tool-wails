@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 16.933333 16.933333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   sodipodi:docname="ico.svg"
+   inkscape:export-filename="ico.png"
+   inkscape:export-xdpi="768"
+   inkscape:export-ydpi="768"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.5153906"
+     inkscape:cx="-43.553127"
+     inkscape:cy="42.563284"
+     inkscape:window-width="1440"
+     inkscape:window-height="697"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer3" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline">
+    <circle
+       style="fill:#04cbb0;fill-opacity:0.988235;stroke-width:2.5"
+       id="path1192"
+       cx="8.4666662"
+       cy="8.4666662"
+       r="8.4666662" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="kage1"
+     style="display:inline;fill:#000000;fill-opacity:0.15000001">
+    <path
+       id="rect2017"
+       style="fill:#000000;fill-opacity:0.12;stroke-width:3.25506"
+       d="M 1.7948819 8.9839102 C -1.3193448 13.677025 -2.4557064 12.974404 -4.2233805 11.354674 L -4.237266 12.583905 L -6.1655217 10.65565 L -6.539699 11.029827 L -6.4684446 11.101082 L -2.2739312 14.853452 L 1.1181471 18.339074 L 0.94384772 18.513374 L -6.4684446 11.101082 L -6.5448148 11.03275 L -6.5470072 17.333838 C -6.3707747 17.551875 -6.1838207 17.761024 -5.9868374 17.960512 C -3.2536007 20.693529 0.98357672 21.228513 4.3103475 19.260632 L 4.3099821 13.537254 L 1.8215567 13.828118 L 1.7948819 8.9839102 z "
+       transform="rotate(-45)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="kage2" />
+  <g
+     inkscape:label="Layer 1 コピー"
+     inkscape:groupmode="layer"
+     id="g3115"
+     transform="translate(-3.4361756,0.19201052)" />
+  <g
+     inkscape:label="moji"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <g
+       id="g2004"
+       transform="translate(0,0.36518338)">
+      <text
+         xml:space="preserve"
+         style="font-weight:600;font-size:7.5525px;font-family:'Hiragino Kaku Gothic Pro';-inkscape-font-specification:'Hiragino Kaku Gothic Pro, Semi-Bold';fill:#ffffff;fill-opacity:0.98927;stroke-width:2.23007"
+         x="4.37467"
+         y="9.738946"
+         id="text256"
+         inkscape:label="text256"
+         transform="scale(0.89202731,1.1210419)"><tspan
+           sodipodi:role="line"
+           id="tspan254"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:7.5525px;font-family:'Hiragino Kaku Gothic Pro';-inkscape-font-specification:'Hiragino Kaku Gothic Pro, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:0.98927;stroke-width:2.23007"
+           x="4.37467"
+           y="9.738946">0x</tspan></text>
+      <rect
+         style="fill:#ffffff;fill-opacity:0.98927;stroke-width:2.5"
+         id="rect1999"
+         width="10.583333"
+         height="0.52916664"
+         x="3.1750002"
+         y="11.529368" />
+    </g>
+  </g>
+</svg>
