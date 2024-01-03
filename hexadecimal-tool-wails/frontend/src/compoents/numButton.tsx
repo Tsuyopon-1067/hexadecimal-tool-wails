@@ -8,15 +8,15 @@ interface NumButtonProps {
 }
 
 function NumButton({ number, onClick }: NumButtonProps) {
-    const decimalString = number.toString();
-    const hexString: string = number.toString(16);
+    const binString = number.toString(2).padStart(4, "0");
+    const hexString: string = number.toString(16).toUpperCase();
     const buttonNumber = number;
     return (
         <button
             onClick={() => onClick(buttonNumber)}
             className={styles.numButton}
         >
-            {decimalString} : 0x000{hexString}
+            {hexString} : 0b{binString}
         </button>
     );
 }
