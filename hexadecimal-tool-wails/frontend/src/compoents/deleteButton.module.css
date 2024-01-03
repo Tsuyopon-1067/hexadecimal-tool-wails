@@ -1,0 +1,20 @@
+.mainDiv {
+    display: flex;
+    margin: 0 0 10pt 0;
+}
+.deleteButton {
+    margin: 3px;
+    padding: 4px;
+    width: 20vw;
+    font-size: 2.5vmin;
+    border-radius: 5px;
+    border: solid;
+    box-shadow: 3px 4px 3px 0px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    color: black;
+    border-color: #04cbb0;
+}
+
+.deleteButton:hover {
+    box-shadow: 1px 6px 15px rgba(0, 0, 0, 0.5);
+}
