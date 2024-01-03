@@ -1,15 +1,14 @@
-import { useState } from "react";
 import styles from "./numberDisplayList.module.css";
 import NumberDisplayListLine from "./numberDisplayListLine";
-import { HexDecBin } from "../types";
+import { main } from "../../wailsjs/go/models";
 
 interface NumberDisplayListProps {
-    data: HexDecBin;
+    data: main.HexDecBin;
     title: string;
 }
 function NumberDisplayList({ title, data }: NumberDisplayListProps) {
     const descriptions = ["16進数", "10進数", "2進数"];
-    const values = [data.hex, data.dec, data.bin];
+    const values = [data?.Hex || "", data?.Dec || "", data?.Bin || ""];
     const numberDisplayListLines = [];
     for (let i = 0; i < 3; i++) {
         numberDisplayListLines.push(

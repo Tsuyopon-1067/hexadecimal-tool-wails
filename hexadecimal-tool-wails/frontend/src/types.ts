@@ -1,23 +1,14 @@
-export interface ValueData {
-    value: HexDecBin;
-    complementValue: HexDecBin;
-}
+import { main } from "../wailsjs/go/models";
 
-export interface HexDecBin {
-    hex: string;
-    dec: string;
-    bin: string;
-}
-
-export const defaultValueData: ValueData = {
+export const defaultValueData: main.ValueData = new main.ValueData({
     value: {
-        hex: "",
-        dec: "",
-        bin: "",
+        Hex: "",
+        Dec: "",
+        Bin: "",
     },
     complementValue: {
-        hex: "",
-        dec: "",
-        bin: "",
+        Hex: "",
+        Dec: "",
+        Bin: "",
     },
-};
+});

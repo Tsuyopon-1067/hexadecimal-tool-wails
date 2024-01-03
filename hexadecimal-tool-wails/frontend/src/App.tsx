@@ -6,7 +6,8 @@ import NumButtonList from "./compoents/numButtonList";
 import NumberDisplayList from "./compoents/numberDisplayList";
 import styles from "./App.module.css";
 import { Push, GetValueData } from "../wailsjs/go/main/Complement";
-import { ValueData, defaultValueData } from "./types";
+import { main } from "../wailsjs/go/models";
+import { defaultValueData } from "./types";
 
 function App() {
     const [resultText, setResultText] = useState(
@@ -15,17 +16,18 @@ function App() {
     const [name, setName] = useState("");
     const updateName = (e: any) => setName(e.target.value);
     const updateResultText = (result: string) => setResultText(result);
-    const [values, setValues] = useState<ValueData>();
+    const [values, setValues] = useState<main.ValueData>();
 
     function greet() {
         Greet(name).then(updateResultText);
     }
     const numberButtonClick = (key: number) => {
-        Push(key).then();
+        Push(key).then(renewValues);
     };
     const renewValues = () => {
-        GetValueData().then((data) => setValues(data));
+        GetValueData().then(updateValues);
     };
+    const updateValues = (result: main.ValueData) => setValues(result);
 
     return (
         <div id="App">
@@ -33,11 +35,11 @@ function App() {
                 <div className={styles.display}>
                     <NumberDisplayList
                         title="数値"
-                        data={values?.value || defaultValueData.value}
+                        data={values?.Value || defaultValueData.Value}
                     />
                     <NumberDisplayList
                         title="補数"
-                        data={values?.value || defaultValueData.value}
+                        data={values?.ComplementValue || defaultValueData.Value}
                     />
                 </div>
                 <div className={styles.buttonList}>

@@ -6,14 +6,14 @@ import (
 )
 
 type ValueData struct {
-	value HexDecBin
-	complementValue HexDecBin
+	Value HexDecBin           `json:"Value"`
+	ComplementValue HexDecBin `json:"ComplementValue"`
 }
 
 type HexDecBin struct {
-	hex string
-	dec string
-	bin string
+	Hex string `json:"Hex"`
+	Dec string `json:"Dec"`
+	Bin string `json:"Bin"`
 }
 
 var stack ComplementStack
@@ -53,5 +53,5 @@ func (c *Complement) GetValueData() ValueData {
 	normal := HexDecBin{hex, dec, bin}
 	complement := HexDecBin{cHex, cDec, cBin}
 	fmt.Println(ValueData{normal, complement})
-	return ValueData{value: normal, complementValue: complement}
+	return ValueData{Value: normal, ComplementValue: complement}
 }
