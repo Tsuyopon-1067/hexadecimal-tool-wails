@@ -24,6 +24,10 @@
 -   Mac
 -   Linux
 
+## Download
+
+https://github.com/Tsuyopon-1067/hexadecimal-tool-wails/releases/tag/v1.0.0
+
 ## Framework, Language
 
 -   Wails v2.7.1
