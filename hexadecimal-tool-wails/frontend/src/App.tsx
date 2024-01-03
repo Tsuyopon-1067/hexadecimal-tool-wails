@@ -2,10 +2,10 @@ import { useState } from "react";
 import logo from "./assets/images/logo-universal.png";
 import "./App.css";
 import { Greet } from "../wailsjs/go/main/App";
-import NumButtonList from "./compoents/numButtonList";
+import ButtonList from "./compoents/buttonList";
 import NumberDisplayList from "./compoents/numberDisplayList";
 import styles from "./App.module.css";
-import { Push, GetValueData } from "../wailsjs/go/main/Complement";
+import { Push, GetValueData, Delete, Pop } from "../wailsjs/go/main/Complement";
 import { main } from "../wailsjs/go/models";
 import { defaultValueData } from "./types";
 
@@ -23,6 +23,12 @@ function App() {
     }
     const numberButtonClick = (key: number) => {
         Push(key).then(renewValues);
+    };
+    const deleteAllButtonClick = () => {
+        Delete().then(renewValues);
+    };
+    const deleteButtonClick = () => {
+        Pop().then(renewValues);
     };
     const renewValues = () => {
         GetValueData().then(updateValues);
@@ -43,7 +49,11 @@ function App() {
                     />
                 </div>
                 <div className={styles.buttonList}>
-                    <NumButtonList onClick={numberButtonClick} />
+                    <ButtonList
+                        onClick={numberButtonClick}
+                        deleteButtonClick={deleteButtonClick}
+                        deleteAllButtonClick={deleteAllButtonClick}
+                    />
                 </div>
             </div>
             <div id="result" className="result">

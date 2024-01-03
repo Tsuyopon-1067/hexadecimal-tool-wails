@@ -55,3 +55,7 @@ func (c *Complement) GetValueData() ValueData {
 	fmt.Println(ValueData{normal, complement})
 	return ValueData{Value: normal, ComplementValue: complement}
 }
+
+func (c *Complement) Delete() {
+	stack.Delete()
+}

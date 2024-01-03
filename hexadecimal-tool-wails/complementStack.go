@@ -15,6 +15,7 @@ type ComplementStackI interface {
 	Push(int)
 	Pop() int
 	Size() int
+	Delete()
 	ToHexDecBinString() (string, string, string)
 }
 
@@ -38,6 +39,10 @@ func (s *ComplementStack) Pop() int {
 
 func (s *ComplementStack) Size() int {
 	return s.stack.Size()
+}
+
+func (s *ComplementStack) Delete() {
+	s.stack.data = s.stack.data[:0]
 }
 
 func (s *ComplementStack) ToHexDecBinString() (string, string, string) {
